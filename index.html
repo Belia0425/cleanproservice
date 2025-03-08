@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanPro Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/Horizontal logo.png" alt="Logo CleanPro Service">
+        </div>
+        <!-- Botón hamburguesa para móviles -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar (menú lateral) -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" onclick="toggleMenu()">×</span>
+        <a href="#">Home</a>
+        <a href="#">Servicios</a>
+        <a href="#">Quiénes somos</a>
+        <a href="#">Contáctanos</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <img src="img/casa_limpia.jpg" alt="Casa limpia" class="background-image">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>¿No tienes tiempo para limpiar tu <span class="highlight">HOGAR</span>? ¡Nosotros lo hacemos por ti!</h1>
+            <a href="#" class="btn">Descubre más</a>
+        </div>
+    </div>
+
+    <!-- JavaScript para el menú lateral -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
