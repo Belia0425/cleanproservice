@@ -13,7 +13,6 @@
         <div class="logo">
             <img src="img/Horizontal logo.png" alt="Logo CleanPro Service">
         </div>
-        <!-- Botón hamburguesa para móviles -->
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
@@ -37,17 +36,75 @@
         <img src="img/casa_limpia.jpg" alt="Casa limpia" class="background-image">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>¿No tienes tiempo para limpiar tu <span class="highlight">HOGAR</span>? ¡Nosotros lo hacemos por ti!</h1>
+            <h1>¿No tienes tiempo para limpiar tu <span class="highlight">HOGAR</span>? <br>¡Nosotros lo hacemos por ti!</h1>
             <a href="#" class="btn">Descubre más</a>
         </div>
     </div>
 
-    <!-- JavaScript para el menú lateral -->
-    <script>
-        function toggleMenu() {
-            document.getElementById("sidebar").classList.toggle("active");
-        }
-    </script>
+    <section class="services">
+       <div class="separator"></div>
+       <div class="container">
+           <div class="services">
+               <div class="service-box">
+                   <div class="service-text">
+                       <h3>Limpieza Comercial</h3>
+                       <p>Tu empresa, siempre impecable. Ambientes limpios que generan confianza.</p>
+                   </div>
+                   <img src="img/casa_ordenada.jpg" alt="Limpieza Comercial" class="service-img">
+                   <button class="btn-custom open-modal">Solicita tu servicio</button>
+               </div>
+               <div class="service-box">
+                   <div class="service-text">
+                       <h3>Limpieza Industrial</h3>
+                       <p>Higiene de alto nivel para grandes espacios. Soluciones seguras y efectivas.</p>
+                   </div>
+                   <img src="img/oficina_limpia.jpg" alt="Limpieza Industrial" class="service-img">
+                   <button class="btn-custom open-modal">Solicita tu servicio</button>
+               </div>
+               <div class="service-box">
+                   <div class="service-text">
+                       <h3>Limpieza de Carros</h3>
+                       <p>Tu auto, como nuevo en minutos. Brillo y protección para tu vehículo.</p>
+                   </div>
+                   <img src="img/carro_limpio.jpg" alt="Limpieza de Carros" class="service-img">
+                   <button class="btn-custom open-modal">Solicita tu servicio</button>
+               </div>
+           </div>
+       </div>
+       <div class="separator"></div>
+    </section>
 
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content animate-modal">
+            <span class="close-modal">&times;</span>
+            <h2>Solicita tu servicio</h2>
+            <form id="serviceForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+                
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" required>
+    
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" required>
+    
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" required>
+    
+                <label for="serviceType">Tipo de Servicio:</label>
+                <select id="serviceType">
+                    <option value="comercial">Limpieza Comercial</option>
+                    <option value="industrial">Limpieza Industrial</option>
+                    <option value="carros">Limpieza de Carros</option>
+                </select>
+    
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="thankYouMessage" class="hidden">Gracias por confiar en nosotros. Pronto te contactaremos.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

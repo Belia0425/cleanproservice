@@ -183,3 +183,175 @@
 .sidebar.active {
     left: 0;
 }
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sección de servicios */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    width: 100%;
+    height: 20px;
+    background-color: #6ec1e4;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Contenedor principal de los servicios */
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cajas de servicio */
+.service-box {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+}
+
+/* Imágenes */
+.service-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Botón */
+.btn-custom {
+    background-color: #0056b3;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #003366;
+}
+
+.separator {
+    height: 50px; /* Ajusta el valor aquí */
+}
+
+/* Responsive: los servicios se apilan en pantallas pequeñas */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .service-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* Modal */
+.modal {
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 350px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background: #002F6C;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #00AEEF;
+}
+
+/* Mensaje de agradecimiento */
+.hidden {
+    display: none;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
