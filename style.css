@@ -1,4 +1,4 @@
-/* Importar fuente */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -8,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,7 +49,6 @@
     color: #00AEEF;
 }
 
-/* Botón de menú hamburguesa */
 .menu-btn {
     display: none;
     font-size: 30px;
@@ -60,7 +58,7 @@
     color: white;
 }
 
-/* Sidebar */
+
 .sidebar {
     position: fixed;
     left: -250px;
@@ -94,7 +92,6 @@
     cursor: pointer;
 }
 
-/* HERO SECTION */
 .hero {
     position: relative;
     width: 100%;
@@ -122,7 +119,7 @@
     background: linear-gradient(to right, rgba(0, 47, 108, 0.7), rgba(0, 174, 239, 0.5));
 }
 
-/* Resaltar palabra HOGAR */
+
 .highlight {
     color: #002D62;
 }
@@ -154,9 +151,7 @@
     background-color: #00AEEF;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
 
-/* Móviles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -166,7 +161,6 @@
     }
 }
 
-/* Sidebar (Menú lateral) */
 .sidebar {
     position: fixed;
     left: -250px;
@@ -176,15 +170,15 @@
     background: #002F6C;
     padding-top: 60px;
     transition: 0.3s;
-    z-index: 1000; /* Asegura que esté sobre el resto del contenido */
+    z-index: 1000; 
 }
 
-/* Cuando el menú está activo */
+
 .sidebar.active {
     left: 0;
 }
 
-/* Estilos generales */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #f4f4f4;
@@ -193,7 +187,6 @@ body {
     padding: 0;
 }
 
-/* Sección de servicios */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -215,7 +208,6 @@ body {
     padding: 20px;
 }
 
-/* Contenedor principal de los servicios */
 .services {
     display: flex;
     justify-content: space-between;
@@ -223,7 +215,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Cajas de servicio */
 .service-box {
     background-color: #003366;
     color: white;
@@ -234,14 +225,12 @@ body {
     min-width: 250px;
 }
 
-/* Imágenes */
 .service-img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-/* Botón */
 .btn-custom {
     background-color: #0056b3;
     color: white;
@@ -258,10 +247,9 @@ body {
 }
 
 .separator {
-    height: 40px; /* Ajusta el valor aquí */
+    height: 40px; 
 }
 
-/* Responsive: los servicios se apilan en pantallas pequeñas */
 @media (max-width: 768px) {
     .services {
         flex-direction: column;
@@ -274,7 +262,6 @@ body {
 }
 
 
-/* Responsive */
 @media (max-width: 1024px) {
     .service-card {
         width: 45%;
@@ -287,7 +274,6 @@ body {
     }
 }
 
-/* Modal */
 .modal {
      display: none;
      position: fixed;
@@ -321,7 +307,6 @@ body {
     cursor: pointer;
 }
 
-/* Formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -347,7 +332,6 @@ button[type="submit"]:hover {
     background: #00AEEF;
 }
 
-/* Mensaje de agradecimiento */
 .hidden {
     display: none;
     color: green;
@@ -370,7 +354,6 @@ button[type="submit"]:hover {
     gap: 30px;
 }
 
-/* IMAGEN */
 .about-image {
     flex: 1;
     max-width: 500px;
@@ -381,7 +364,6 @@ button[type="submit"]:hover {
     border-radius: 20px;
 }
 
-/* TEXTO */
 .about-text {
     flex: 1;
     font-size: 18px;
@@ -390,7 +372,6 @@ button[type="submit"]:hover {
     color: #333;
 }
 
-/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -403,5 +384,99 @@ button[type="submit"]:hover {
 
     .about-text {
         font-size: 16px;
+    }
+}
+
+footer {
+    background-color: #002b5e;
+    color: white;
+    padding: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links {
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.footer-social {
+    text-align: left;
+    translate: 40px;
+    margin-top: 40px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #00aaff;
+}
+
+
+.footer-info {
+    text-align: left;
+    font-size: 0.9em;
+
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 40px;
+}
+
+.footer-legal a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-legal a:hover {
+    color: #00aaff;
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 20px;
     }
 }

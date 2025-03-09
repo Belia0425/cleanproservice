@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    function toggleMenu() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+    }
+
+    document.querySelector(".menu-btn").addEventListener("click", toggleMenu);
+    document.querySelector(".close-btn").addEventListener("click", toggleMenu);
+
+    document.addEventListener("click", function (event) {
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.querySelector(".menu-btn");
+
+        if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+            sidebar.classList.remove("active");
+        }
+    });
+
+    // Modal Formulario
     const modal = document.getElementById("serviceModal");
     const openButtons = document.querySelectorAll(".open-modal");
     const closeButton = document.querySelector(".close-modal");
@@ -6,10 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const thankYouMessage = document.getElementById("thankYouMessage");
     const body = document.body;
 
-    // Aseguramos que el modal esté oculto al cargar la página
     modal.style.display = "none";
 
-    // Evento para abrir el modal solo cuando se hace clic en un botón "Solicita tu servicio"
     openButtons.forEach(button => {
         button.addEventListener("click", () => {
             modal.style.display = "flex";
@@ -17,13 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Evento para cerrar el modal cuando se hace clic en la "X"
     closeButton.addEventListener("click", () => {
         modal.style.display = "none";
         body.classList.remove("modal-active");
     });
 
-    // Cerrar modal si se hace clic fuera de él
     window.addEventListener("click", (event) => {
         if (event.target.classList.contains("modal")) {
             modal.style.display = "none";
@@ -31,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Evento para mostrar mensaje de agradecimiento al enviar el formulario
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         form.style.display = "none";
@@ -44,4 +58,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     });
 });
-
