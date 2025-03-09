@@ -258,7 +258,7 @@ body {
 }
 
 .separator {
-    height: 50px; /* Ajusta el valor aquí */
+    height: 40px; /* Ajusta el valor aquí */
 }
 
 /* Responsive: los servicios se apilan en pantallas pequeñas */
@@ -354,4 +354,54 @@ button[type="submit"]:hover {
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1100px;
+    align-items: center;
+    gap: 30px;
+}
+
+/* IMAGEN */
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* TEXTO */
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #333;
+}
+
+/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
 }
